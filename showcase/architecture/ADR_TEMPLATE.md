@@ -31,7 +31,7 @@ Be honest — every real decision has a cost.
 
 | Alternative | Why rejected |
 |---|---|
-| Option A | Reason |
+| Postgres | Requires migration tooling we don't have time to build for v1; revisit when write volume justifies it |
 | Option B | Reason |
 
 ---

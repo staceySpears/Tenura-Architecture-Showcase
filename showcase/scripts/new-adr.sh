@@ -11,6 +11,12 @@ if [ $# -eq 0 ]; then
 fi
 
 SLUG="$1"
+
+if [[ ! "$SLUG" =~ ^[a-z0-9-]+$ ]]; then
+  echo "Error: slug must contain only lowercase letters, numbers, and hyphens."
+  echo "Example: $0 switch-to-postgres"
+  exit 1
+fi
 DATE=$(date +%Y-%m-%d)
 TEMPLATE="$(dirname "$0")/../architecture/ADR_TEMPLATE.md"
 OUTPUT="$(dirname "$0")/../architecture/${DATE}-${SLUG}.md"

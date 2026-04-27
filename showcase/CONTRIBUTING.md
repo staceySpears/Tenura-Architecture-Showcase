@@ -26,7 +26,10 @@ collaborator without needing to show them the full application first.
 
 ## Adding a New ADR
 
+From the `showcase/` directory:
+
 ```bash
+cd ~/Tenura-Architecture-Showcase/showcase
 ./scripts/new-adr.sh "your-decision-slug"
 ```
 
