@@ -47,11 +47,11 @@ A six-minute reading order if you only have six minutes:
 
 ```mermaid
 flowchart LR
-    A["Resource event<br/>(Listing.save / Document.upload)"] --> B["Agent post-hook<br/>(async, fail-open)"]
+    A["Resource event<br/>Listing.save / Document.upload"] --> B["Agent post-hook<br/>async, fail-open"]
     B --> C["Compliance Engine<br/>validateListing(address)"]
     C --> D["Jurisdiction Registry<br/>STATE + CITY lookup"]
-    D --> E["Rule Modules<br/>HUD · RLTO · lead paint"]
-    E --> F["AgentState<br/>append-only audit log<br/>+ COMPLIANCE_RULE_VERSION"]
+    D --> E["Rule Modules<br/>HUD / RLTO / lead paint"]
+    E --> F["AgentState<br/>audit log + COMPLIANCE_RULE_VERSION"]
 ```
 
 Four agents (Compliance, Placement, Notification, Platform) run as async post-hooks on resource events. They are rule-based, never LLM-backed, because housing compliance requires legal citability and zero hallucination risk. Every run is persisted to `AgentState` with a full `actionLog` for observability. The single planned exception — the Phase 9 Lease Audit Engine — is documented in [ADR #1](./architecture/decisions.md) and gated on a practitioner validation conversation before any code is written ([ADR #12](./architecture/decisions.md)).
