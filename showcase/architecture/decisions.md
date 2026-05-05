@@ -132,7 +132,7 @@ Collapsing these into one field would force the code to re-derive the distinctio
 
 **Choice:** Every feature proposal is filtered through: "Does this make a Section 8 landlord more likely to successfully house a voucher holder?" If no, defer.
 
-**Why:** The competitive risk is becoming "TurboTenant plus Section 8 stuff" rather than "the Section 8 platform that also does property management basics." TurboTenant can add a Section 8 checkbox; they cannot build HAP lifecycle management without rebuilding their whole data model. Build moat before parity.
+**Why:** The competitive risk is becoming "a general-purpose tool plus Section 8 stuff" rather than "the Section 8 platform that also does property management basics." General-purpose property management tools can add a Section 8 checkbox; they cannot build HAP lifecycle management without rebuilding their whole data model. Build moat before parity.
 
 **Cost:** Tenura is explicitly not the best tool for a market-rate-only landlord. That's fine — market-rate-only landlords are not our buyer.
 
